@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#F5F5F5">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="REPORTE DE ASISTENCIAS"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#2196F3"
+        android:textAlignment="center"
+        android:layout_marginBottom="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/inputFechaReporte"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:hint="Fecha (YYYY-MM-DD)"
+            android:background="@android:drawable/editbox_background"
+            android:paddingLeft="12dp"/>
+
+        <Button
+            android:id="@+id/btnBuscarReporte"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="BUSCAR"
+            android:layout_marginLeft="8dp"
+            android:backgroundTint="#2196F3"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtTotalAsistencias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total confirmados: 0"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"/>
+
+    <ListView
+        android:id="@+id/listaAsistencias"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:divider="#EEEEEE"
+        android:dividerHeight="1dp"/>
+
+</LinearLayout>

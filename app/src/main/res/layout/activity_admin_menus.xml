@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#F5F5F5">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GESTIÓN DE MENÚS"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#2E7D32"
+        android:textAlignment="center"
+        android:layout_marginBottom="24dp"/>
+
+    <EditText
+        android:id="@+id/inputFechaMenu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Fecha (Ej: 2026-06-05)"
+        android:background="@android:drawable/editbox_background"
+        android:paddingLeft="12dp"
+        android:layout_marginBottom="12dp"/>
+
+    <EditText
+        android:id="@+id/inputPlato"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Plato Principal"
+        android:background="@android:drawable/editbox_background"
+        android:paddingLeft="12dp"
+        android:layout_marginBottom="12dp"/>
+
+    <EditText
+        android:id="@+id/inputSopa"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Sopa o Entrada"
+        android:background="@android:drawable/editbox_background"
+        android:paddingLeft="12dp"
+        android:layout_marginBottom="12dp"/>
+
+    <EditText
+        android:id="@+id/inputBebida"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Bebida"
+        android:background="@android:drawable/editbox_background"
+        android:paddingLeft="12dp"
+        android:layout_marginBottom="24dp"/>
+
+    <Switch
+        android:id="@+id/switchHabilitarDia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="El comedor estará ABIERTO este día"
+        android:textSize="16sp"
+        android:checked="true"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btnGuardarMenu"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="PUBLICAR MENÚ"
+        android:backgroundTint="#4CAF50"
+        android:textStyle="bold"/>
+</LinearLayout>

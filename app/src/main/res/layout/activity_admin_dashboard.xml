@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#263238"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PANEL DE ADMINISTRADOR"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="40dp"/>
+
+    <Button
+        android:id="@+id/btnAdminMenus"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:text="✏️ Gestionar Menús y Días"
+        android:backgroundTint="#4CAF50"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnAdminAlumnos"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:text="👥 Anexar / Quitar Alumnos"
+        android:backgroundTint="#FF9800"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnAdminAsistencias"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:text="📋 Ver Reporte de Asistencias"
+        android:backgroundTint="#2196F3"
+        android:textSize="16sp"
+        android:layout_marginBottom="40dp"/>
+
+    <Button
+        android:id="@+id/btnAdminSalir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cerrar Sesión"
+        android:backgroundTint="#F44336" />
+
+</LinearLayout>
