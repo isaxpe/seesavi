@@ -1,53 +1,181 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="24dp"
-    android:background="#263238"
-    android:gravity="center">
+    android:background="#F8F9FA" > <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="24dp">
 
     <TextView
+        android:id="@+id/txtTituloAdmin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="PANEL DE ADMINISTRADOR"
-        android:textSize="22sp"
+        android:text="Dashboard Admin"
+        android:textSize="26sp"
         android:textStyle="bold"
-        android:textColor="#FFFFFF"
-        android:layout_marginBottom="40dp"/>
+        android:textColor="#202124"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
-    <Button
-        android:id="@+id/btnAdminMenus"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:text="✏️ Gestionar Menús y Días"
-        android:backgroundTint="#4CAF50"
-        android:textSize="16sp"
-        android:layout_marginBottom="16dp"/>
+    <TextView
+        android:id="@+id/txtSubtituloAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gestión de Comedor SeeSavi"
+        android:textSize="14sp"
+        android:textColor="#5F6368"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/txtTituloAdmin"
+        app:layout_constraintStart_toStartOf="parent"/>
 
-    <Button
-        android:id="@+id/btnAdminAlumnos"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:text="👥 Anexar / Quitar Alumnos"
-        android:backgroundTint="#FF9800"
-        android:textSize="16sp"
-        android:layout_marginBottom="16dp"/>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardAdminMenus"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="32dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:cardBackgroundColor="#FFFFFF"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@id/txtSubtituloAdmin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <Button
-        android:id="@+id/btnAdminAsistencias"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:text="📋 Ver Reporte de Asistencias"
-        android:backgroundTint="#2196F3"
-        android:textSize="16sp"
-        android:layout_marginBottom="40dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <View
+                android:layout_width="32dp"
+                android:layout_height="4dp"
+                android:background="#34A853"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gestión de Menús"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#202124"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crear, editar y habilitar días"
+                android:textSize="12sp"
+                android:textColor="#80868B"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardAdminAlumnos"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:cardBackgroundColor="#FFFFFF"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@id/cardAdminMenus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <View
+                android:layout_width="32dp"
+                android:layout_height="4dp"
+                android:background="#F9AB00"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Directorio de Alumnos"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#202124"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Altas y bajas del sistema"
+                android:textSize="12sp"
+                android:textColor="#80868B"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardAdminAsistencias"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:cardBackgroundColor="#FFFFFF"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@id/cardAdminAlumnos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <View
+                android:layout_width="32dp"
+                android:layout_height="4dp"
+                android:background="#4285F4"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reporte de Asistencias"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#202124"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Listado diario de confirmaciones"
+                android:textSize="12sp"
+                android:textColor="#80868B"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 
     <Button
         android:id="@+id/btnAdminSalir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:text="Cerrar Sesión"
-        android:backgroundTint="#F44336" />
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#EA4335"
+        app:layout_constraintTop_toBottomOf="@id/cardAdminAsistencias"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
